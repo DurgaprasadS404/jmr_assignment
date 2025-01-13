@@ -75,7 +75,7 @@ class _DateCardsState extends State<DateCards> {
                         ),
                       ),
                       Text(
-                        'From AED${item.startingPrice}',
+                        'From AED ${item.startingPrice}',
                         style: TextStyle(
                           fontSize: 12,
                           color: Colors.grey[700],
