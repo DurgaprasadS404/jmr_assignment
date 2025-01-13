@@ -7,6 +7,7 @@ import 'package:jmr_assignment/features/home/presentation/widgets/date_picker_fi
 import 'package:jmr_assignment/features/home/presentation/widgets/departure_and_destination_card.dart';
 import 'package:jmr_assignment/features/home/presentation/widgets/traveler_picker_widget.dart';
 import 'package:jmr_assignment/features/home/presentation/widgets/trip_type_selector.dart';
+import 'package:jmr_assignment/features/search_result/presentation/screens/search_result_screen.dart';
 
 class HomeScreenSearch extends ConsumerStatefulWidget {
   const HomeScreenSearch({super.key});
@@ -65,7 +66,7 @@ class _HomeScreenSearchState extends ConsumerState<HomeScreenSearch> {
                       labelText: 'Departure',
                     ),
                   ),
-                  SizedBox(width:8),
+                  SizedBox(width: 8),
                   Expanded(
                     child: DatePickerField(
                       labelText: 'Return',
@@ -76,19 +77,22 @@ class _HomeScreenSearchState extends ConsumerState<HomeScreenSearch> {
               const SizedBox(height: 24),
               const Row(
                 children: [
-                  Expanded(
-                    child: TravelersPickerField()
-                  ),
-                  SizedBox(width:8),
-                  Expanded(
-                    child:CabinClassPickerField()
-                  )
+                  Expanded(child: TravelersPickerField()),
+                  SizedBox(width: 8),
+                  Expanded(child: CabinClassPickerField())
                 ],
               ),
               const SizedBox(height: 16),
               Center(
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SearchResultScreen(),
+                      ),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.primaryColor,
                     shape: RoundedRectangleBorder(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:jmr_assignment/core/styles/app_colors.dart';
 import 'package:jmr_assignment/core/styles/dimensions.dart';
 
@@ -10,6 +11,9 @@ class HomeScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: AppColors.appBarBackground,
       toolbarHeight: appBarHeight,
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: AppColors.primaryColorLight,
+      ),
       title: Padding(
         padding: const EdgeInsets.only(top: 24.0, bottom: 24),
         child: Text(

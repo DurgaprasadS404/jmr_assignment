@@ -1,7 +1,9 @@
+import 'package:jmr_assignment/features/home/data/models/trip_type.dart';
+
 class Destination {
   final String imagePath;
   final double price;
-  final String tripType;
+  final TripType tripType;
   final String cabinType;
   final String destinationName;
 

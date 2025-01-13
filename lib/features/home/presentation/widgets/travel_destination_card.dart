@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jmr_assignment/features/home/data/models/trip_type.dart';
 import 'package:jmr_assignment/features/home/domain/models/destination.dart';
 
 class TravelDestinationCard extends StatelessWidget {
@@ -38,7 +39,7 @@ class TravelDestinationCard extends StatelessWidget {
               ),
             ),
             Text(
-              '${destination.cabinType} ${destination.tripType}',
+              '${destination.cabinType} ${destination.tripType.toDisplayString()}',
               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 12,

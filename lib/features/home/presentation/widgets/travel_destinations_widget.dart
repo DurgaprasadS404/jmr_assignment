@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jmr_assignment/core/constants/assets.dart';
 import 'package:jmr_assignment/core/styles/app_colors.dart';
+import 'package:jmr_assignment/features/home/data/models/trip_type.dart';
 import 'package:jmr_assignment/features/home/domain/models/destination.dart';
 import 'package:jmr_assignment/features/home/presentation/widgets/travel_destination_card.dart';
 
@@ -21,21 +22,21 @@ class _TravelDestinationsWidgetState extends State<TravelDestinationsWidget> {
     Destination(
       imagePath: Assets.saudiImageAsset,
       price: 867.0,
-      tripType: 'Round Trip',
+      tripType: TripType.roundTrip,
       cabinType: 'Economy',
       destinationName: 'Saudi Arabia',
     ),
     Destination(
       imagePath: Assets.kuwaitImageAsset,
       price: 867.0,
-      tripType: 'One Way Trip',
+      tripType: TripType.oneWay,
       cabinType: 'Business',
       destinationName: 'Saudi Arabia',
     ),
     Destination(
       imagePath: Assets.saudiImageAsset,
       price: 867.0,
-      tripType: 'Round Trip',
+      tripType: TripType.multiCity,
       cabinType: 'Economy',
       destinationName: 'Saudi Arabia',
     ),
